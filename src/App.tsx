@@ -1,16 +1,19 @@
 import React from 'react';
-
+import { Routes, Route } from 'react-router-dom';
 import { Counter } from 'pages/Counter';
 
 import './App.scss';
 
-import logo from './logo.svg';
+function Test() {
+  return <div>Привет</div>;
+}
 
 function App() {
   return (
-    <div>
-      <Counter />
-    </div>
+    <Routes>
+      <Route path="/counter" element={<Counter />} />
+      <Route path="/test" element={<Test />} />
+    </Routes>
   );
 }
 
